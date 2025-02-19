@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'PixelifySans';
+  src: url('../fonts/PixelifySans-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'PublicPixel';
+  src: url('../fonts/PublicPixel.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}

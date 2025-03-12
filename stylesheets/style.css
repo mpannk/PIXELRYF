@@ -1,3 +1,5 @@
-* {
-  background-color: black;
-}
+@import 'reset.css';
+@import 'fonts.css';
+@import 'layout.css';
+@import 'animation.css';
+@import 'adaptive.css';

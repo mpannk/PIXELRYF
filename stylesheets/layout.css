@@ -1,0 +1,1088 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+/* скрытые экран  */
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* главный экран */
+
+/* контейнеры для блоков */
+
+.f-scr-row {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 40vw;
+}
+
+/* умиротворение  */
+
+.f-scr-bw-peace {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  background-image: url(../images/1scr-bw-peace.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.f-scr-peace-color {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  background-image: url(../images/f-scr-peace-color.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* текстовый блок */
+
+.f-scr-text {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 2vw;
+}
+
+.f-scr-main-header {
+  font-size: 2.2vw;
+  font-family: 'Inter';
+  font-weight: 600;
+  color: white;
+  padding-top: 1vw;
+}
+
+.f-scr-second-header {
+  font-size: 1.8vw;
+  font-family: 'Inter';
+  font-weight: 400;
+  color: white;
+}
+
+/* блок с глазом */
+
+.f-scr-eye {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  background-image: url(../images/1scr-eye.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye-container {
+  position: relative;
+  width: 12vw;
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pupil {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  background-image: url(../images/pupil.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* надежда */
+
+.f-scr-bw-hope {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  background-image: url(../images/1scr-bw-hope.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.f-scr-hope-color {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  background-image: url(../images/f-scr-hope-color.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* гнев */
+
+.f-scr-bw-anger {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  background-image: url(../images/1scr-bw-anger.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.f-scr-anger-color {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  background-image: url(../images/f-scr-anger-color.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* страх */
+
+.f-scr-bw-fear {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  background-image: url(../images/1scr-bw-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.f-scr-fear-color {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  background-image: url(../images/f-scr-fear-color.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* подвал */
+
+.f-scr-end {
+  width: 100%;
+  height: 40vw;
+  position: relative;
+  background-image: url(../images/1scr-end.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.the-end-text {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+
+.white-block {
+  width: 35vw;
+  height: 8.5vw;
+  border: 0.3vw solid white;
+  display: flex;
+  flex-direction: row;
+}
+
+.end-headers {
+  font-size: 2.7vw;
+  font-family: 'Inter';
+  font-weight: 400;
+  color: white;
+  margin-top: 1vw;
+  margin-left: 1.2vw;
+}
+.end-information {
+  font-size: 2.7vw;
+  font-family: 'Inter';
+  font-weight: 400;
+  color: white;
+  margin-top: 1vw;
+  margin-left: 3.4vw;
+}
+
+/* экран умиротворение */
+
+#peace-screen {
+  width: 100%;
+  height: 111vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-peace {
+  position: absolute;
+  width: 62.2vw;
+  height: 9.2vw;
+  background-image: url(../images/header-peace.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 4vw 0 0 9vw;
+}
+
+/* ленточки умиротворение */
+
+.paths-peace {
+  width: 28vw;
+  height: 48vw;
+  display: flex;
+}
+
+.big-path {
+  width: 5vw;
+  height: 48vw;
+  position: relative;
+  margin: 0 0 0 1.5vw;
+}
+
+.smallest-path {
+  width: 3.8vw;
+  height: 26vw;
+  position: relative;
+  margin: 13.1vw 0 0 9.5vw;
+}
+
+.small-path {
+  width: 3vw;
+  height: 32.3vw;
+  position: relative;
+  margin: 13.1vw 0 0 2vw;
+}
+
+.peace-print {
+  width: 48vw;
+  height: 39vw;
+  position: absolute;
+  background-image: url(../images/peace-print.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 0.4vw;
+  left: 51.5vw;
+}
+
+/* диджей-пульт */
+
+.dj-console {
+  width: 56vw;
+  height: 59vw;
+  position: relative;
+  border: 1.3vw solid white;
+  top: -21.5vw;
+  left: 35.5vw;
+}
+
+.ladder-dj {
+  width: 10.5vw;
+  height: 24vw;
+  position: absolute;
+  background-image: url(../images/ladder-dj.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 1.2vw 0 0 40.5vw;
+}
+
+.lever-dj {
+  width: 7.6vw;
+  height: 4vw;
+  position: absolute;
+  background-image: url(../images/lever-dj.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: 1.5vw;
+}
+
+.buttons {
+  width: 35vw;
+  height: 23.7vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 34.7vw 0 0 0;
+  gap: 1.4vw;
+}
+
+.buttons-fst-row {
+  width: 35vw;
+  height: 8vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3vw;
+}
+
+.buttons-snd-row {
+  width: 35vw;
+  height: 10vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3vw;
+}
+
+.music-button-dj {
+  width: 6.4vw;
+  height: 8vw;
+  background-image: url(../images/music-button-dj.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.disc-dj {
+  width: 30.5vw;
+  height: 30vw;
+  position: absolute;
+  background-image: url(../images/disc-dj.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 1.5vw;
+  left: 2vw;
+}
+
+.second-disc-dj {
+  width: 14.5vw;
+  height: 14vw;
+  position: absolute;
+  background-image: url(../images/second-disc-dj.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 40.5vw;
+  left: 37.5vw;
+}
+
+.stick-dj {
+  width: 2.4vw;
+  height: 41.4vw;
+  position: absolute;
+  background-image: url(../images/stick-dj.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 1.5vw;
+  left: 35vw;
+}
+
+.prod {
+  width: 11.5vw;
+  height: 7.7vw;
+  position: absolute;
+  border: 0.3vw solid #8f00ff;
+  top: 29vw;
+  left: 40vw;
+  font-family: 'PixelifySans';
+  font-size: 1.6vw;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  padding-top: 1.8vw;
+}
+
+/* текст  */
+
+.text-peace-container {
+  width: 36vw;
+  height: 37vw;
+  position: relative;
+  top: -57vw;
+  left: 3.5vw;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter';
+  color: white;
+  text-align: left;
+}
+
+.bold-text-peace {
+  width: 27.7vw;
+  height: 10vw;
+  font-size: 2.5vw;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.fst-text-peace {
+  width: 27.7vw;
+  height: 10vw;
+  font-size: 1.5vw;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.snd-text-peace {
+  width: 27.7vw;
+  height: 10vw;
+  font-size: 1.5vw;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding-left: 7.5vw;
+}
+
+.trd-text-peace {
+  width: 27.7vw;
+  height: 10vw;
+  font-size: 1.5vw;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+/* кнопка домой */
+
+.home-button-peace {
+  width: 13vw;
+  height: 14.5vw;
+  position: relative;
+  background-image: url(../images/home-button-peace.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: -50vw;
+  left: 3vw;
+}
+
+.blur-home-button-peace {
+  width: 13vw;
+  height: 14.5vw;
+  position: absolute;
+  background-image: url(../images/blur-home-button-peace.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+}
+
+/* большая иконка */
+
+.big-icon-peace {
+  width: 100vw;
+  height: 91vw;
+  position: absolute;
+  background-image: url(../images/big-icon-peace.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 63vw;
+  left: 15vw;
+  transform: translateX(0%);
+}
+
+/* экран надежда */
+
+#hope-screen {
+  width: 100%;
+  height: 111vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-hope {
+  position: absolute;
+  width: 41.2vw;
+  height: 9.2vw;
+  background-image: url(../images/header-hope.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 4vw 0 0 9vw;
+}
+
+.path-hope {
+  width: 5.5vw;
+  height: 58.7vw;
+  background-image: url(../images/path-hope.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 0 0 1.5vw;
+}
+
+.hope-print {
+  width: 91.5vw;
+  height: 56.5vw;
+  position: absolute;
+  background-image: url(../images/hope-print.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: -16vw;
+  left: 31vw;
+}
+
+/* закос на матрицу */
+
+.matrix-container {
+  width: 12.1vw;
+  height: 38.8vw;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  top: 27vw;
+  left: 10vw;
+}
+
+.numbers-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.digit {
+  font-family: 'PixelifySans';
+  font-size: 3.5vw;
+  font-weight: 400;
+  color: #00ff76;
+  opacity: 1;
+}
+
+/* экран с игрой */
+
+.game-screen {
+  width: 66vw;
+  height: 38vw;
+  position: relative;
+  border: 0.6vw solid white;
+  top: -31.5vw;
+  left: 28vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign {
+  width: 14.6vw;
+  height: 13.6vw;
+  background-image: url(../images/sign-hope.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.warning {
+  width: 0.8vw;
+  height: 4.8vw;
+  background-image: url(../images/warning-hope.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 3.5vw;
+}
+
+.score {
+  width: 40vw;
+  position: absolute;
+  top: 0.5vw;
+  left: 1vw;
+  font-family: 'PixelifySans';
+  font-size: 2.9vw;
+  font-weight: 400;
+  color: #00ff76;
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+
+.stars-container {
+  width: 64vw;
+  height: 35vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  top: 1.5vw;
+  left: 0.7vw;
+}
+
+.stars-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+.star-hope {
+  width: 11vw;
+  height: 11.6vw;
+  background-image: url(../images/hope-star.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 15;
+}
+
+.victory-message {
+  position: absolute;
+  color: #ff0088;
+  font-family: 'PixelifySans';
+  font-size: 2.9vw;
+  text-align: center;
+  display: none;
+}
+
+/* игровая панель */
+
+.game-bar {
+  width: 65.9vw;
+  height: 11.1vw;
+  position: relative;
+  border: 0.6vw solid white;
+  top: -25vw;
+  left: 4vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3vw;
+}
+
+.sticks {
+  width: 4vw;
+  height: 6.5vw;
+  background-image: url(../images/sticks-hope.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.pink-buttons {
+  width: 15vw;
+  height: 8.6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+.pink-button {
+  width: 15vw;
+  height: 3.5vw;
+  background-image: url(../images/pink-panel-button.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.pink-button-color {
+  width: 15vw;
+  height: 3.5vw;
+  position: absolute;
+  background-image: url(../images/pink-panel-button-green.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  z-index: 4;
+}
+
+.cross {
+  width: 8vw;
+  height: 6.5vw;
+  background-image: url(../images/game-cross-hope.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cross-color {
+  width: 8vw;
+  height: 6.5vw;
+  position: absolute;
+  background-image: url(../images/game-cross-hope-green.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  z-index: 5;
+}
+
+.buttons-w-text {
+  width: 32vw;
+  height: 6.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+.start {
+  width: 15vw;
+  height: 6.5vw;
+  border: 0.3vw solid #ff0088;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PixelifySans';
+  font-size: 2.9vw;
+  font-weight: 400;
+  color: #00ff76;
+  z-index: 10;
+}
+
+.message {
+  width: 15vw;
+  height: 6.5vw;
+  border: 0.3vw solid #ff0088;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PixelifySans';
+  font-size: 2.9vw;
+  font-weight: 400;
+  color: #00ff76;
+  z-index: 10;
+}
+
+/* сообщение  */
+
+.notification {
+  width: 25.4vw;
+  height: 12.3vw;
+  position: absolute;
+  background-image: url(../images/message-hope.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 85vw;
+  left: 45vw;
+  z-index: 10;
+}
+
+/* кнопка домой */
+
+.home-button-hope {
+  width: 13vw;
+  height: 14.5vw;
+  position: relative;
+  background-image: url(../images/home-button-hope.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: -11vw;
+  left: 3vw;
+}
+
+.blur-home-button-hope {
+  width: 13vw;
+  height: 14.5vw;
+  position: absolute;
+  background-image: url(../images/blur-home-button-hope.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+}
+
+/* рука */
+
+.hand-hope {
+  width: 49.2vw;
+  height: 40vw;
+  position: absolute;
+  background-image: url(../images/hand-hope.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 75vw;
+}
+
+/* большая иконка */
+
+.big-icon-hope {
+  width: 82.5vw;
+  height: 86.5vw;
+  position: absolute;
+  background-image: url(../images/big-icon-hope.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 49vw;
+  left: 33vw;
+}
+
+.big-icon-hope-blur {
+  width: 71.2vw;
+  height: 75.4vw;
+  position: absolute;
+  background-image: url(../images/big-icon-hope-blur.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 15vw;
+  left: 16.5vw;
+  opacity: 0;
+}
+
+/* экран гнев */
+
+#anger-screen {
+  width: 100%;
+  height: 111vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-anger {
+  position: absolute;
+  width: 23.2vw;
+  height: 9.3vw;
+  background-image: url(../images/header-anger.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 4vw 0 0 13vw;
+}
+
+.path-anger {
+  width: 8.5vw;
+  height: 59vw;
+  background-image: url(../images/path-anger.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 0 0 1.5vw;
+}
+
+.anger-print {
+  width: 82.6vw;
+  height: 63vw;
+  position: absolute;
+  background-image: url(../images/anger-print.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: -19vw;
+  left: 32vw;
+}
+
+/* кнопка домой */
+
+.home-button-anger {
+  width: 13vw;
+  height: 14.5vw;
+  position: absolute;
+  background-image: url(../images/home-button-anger.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 94vw;
+  left: 2vw;
+}
+
+.blur-home-button-anger {
+  width: 13vw;
+  height: 14.5vw;
+  position: absolute;
+  background-image: url(../images/blur-home-button-anger.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  z-index: 5;
+}
+
+/* экран страх */
+
+#fear-screen {
+  width: 100%;
+  height: 111vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-fear {
+  position: absolute;
+  width: 29.3vw;
+  height: 9.3vw;
+  background-image: url(../images/header-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 4vw 0 0 9vw;
+}
+
+.big-path-fear {
+  width: 7.9vw;
+  height: 60.6vw;
+  background-image: url(../images/big-path-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: 1vw;
+}
+
+.small-path-fear {
+  width: 8.1vw;
+  height: 40.8vw;
+  position: absolute;
+  background-image: url(../images/small-path-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 12.6vw;
+  left: 10vw;
+}
+
+.fear-print {
+  width: 72.7vw;
+  height: 54vw;
+  position: absolute;
+  background-image: url(../images/fear-print.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: -12vw;
+  left: 37vw;
+}
+
+/* экран с перетаскиванием */
+
+.fear-not-game {
+  width: 69.7vw;
+  height: 52vw;
+  position: absolute;
+  border: 0.7vw solid white;
+  top: 22vw;
+  left: 20.7vw;
+}
+
+/* нормальный текст */
+
+.fear-normal-text {
+  width: 11vw;
+  height: 9vw;
+  position: absolute;
+  font-size: 2.5vw;
+  font-family: 'Inter';
+  font-weight: 500;
+  color: white;
+  text-align: left;
+  top: 67vw;
+  left: 5vw;
+}
+
+/* пискельный текст */
+
+.pixel-text-fear {
+  width: 53vw;
+  height: 18.2vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'PublicPixel';
+  font-weight: 400;
+  font-size: 6vw;
+  color: #36009e;
+  top: 77vw;
+  left: 5vw;
+}
+
+.parts-pixel-text {
+  width: 52.9vw;
+  height: 18.2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.parts-pixel-text p:nth-of-type(1) {
+  padding-left: 18vw;
+}
+
+.emotion {
+  margin-left: 18vw;
+}
+
+.green-button {
+  color: #009e37;
+}
+
+/* кнопка домой */
+
+.home-button-fear {
+  width: 13vw;
+  height: 14.5vw;
+  position: absolute;
+  background-image: url(../images/home-button-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 94vw;
+  left: 4vw;
+}
+
+.blur-home-button-fear {
+  width: 13vw;
+  height: 14.5vw;
+  position: absolute;
+  background-image: url(../images/blur-home-button-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+}
+
+/* большая иконка */
+
+.big-icon-fear {
+  width: 117.1vw;
+  height: 99.5vw;
+  position: absolute;
+  background-image: url(../images/big-icon-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 62vw;
+  left: 33vw;
+}

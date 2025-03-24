@@ -425,7 +425,8 @@ body {
   opacity: 0;
 }
 
-/* аудио элементы */
+/* звуки */
+
 audio {
   position: fixed;
   z-index: 1000;

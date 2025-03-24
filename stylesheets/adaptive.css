@@ -1,5 +1,6 @@
 @media screen and (max-width: 500px) {
   /* главный экран */
+
   #main-screen {
     height: auto;
   }
@@ -42,6 +43,7 @@
   }
 
   /* подвал */
+
   .f-scr-end {
     height: auto;
     padding: 5vw 0;
@@ -61,6 +63,16 @@
     border: 0.6vw solid white;
   }
 
+  .white-block:nth-of-type(1):hover {
+    border: 0.6vw solid #bf0c00;
+  }
+  .white-block:nth-of-type(2):hover {
+    border: 0.6vw solid #009e37;
+  }
+  .white-block:nth-of-type(3):hover {
+    border: 0.6vw solid #ff0088;
+  }
+
   .end-headers {
     font-size: 5vw;
     margin-top: 2vw;
@@ -73,12 +85,13 @@
     margin-left: 6.8vw;
   }
 
-  /* отключаем анимацию появления ошибок */
+  /* анимация появления ошибок будет странно смотреться на мобилке, отключаем */
   .error {
     display: none;
   }
 
   /* экран умиротворение */
+
   #peace-screen {
     height: 450vw;
   }
@@ -190,10 +203,15 @@
     height: 17vw;
   }
 
+  .colored-music-button {
+    width: 11.4vw;
+    height: 14.5vw;
+  }
+
   .pause-button-dj {
-    width: 10.6vw;
-    height: 9vw;
-    left: 22vw;
+    width: 8.2vw;
+    height: 8.5vw;
+    left: 23.4vw;
   }
 
   .second-disc-dj {
@@ -237,5 +255,522 @@
   .blur-home-button-peace {
     width: 48vw;
     height: 48.8vw;
+  }
+
+  /* экран надежда */
+
+  #hope-screen {
+    height: 420vw;
+  }
+
+  .header-hope {
+    width: 74.2vw;
+    height: 16.6vw;
+    margin: 38vw 0 0 20vw;
+  }
+
+  .path-hope {
+    width: 14.2vw;
+    height: 152.6vw;
+    margin: 0 0 0 2vw;
+  }
+
+  .hope-print {
+    width: 100vw;
+    height: 90.8vw;
+    top: -25vw;
+    left: 20vw;
+  }
+
+  .matrix-container {
+    width: 31.4vw;
+    height: 84.8vw;
+    top: 60vw;
+    left: 16.5vw;
+    gap: 4vw;
+  }
+
+  .numbers-column {
+    gap: 1vw;
+  }
+
+  .digit {
+    font-size: 6.4vw;
+  }
+
+  .game-screen {
+    width: 94vw;
+    height: 54.2vw;
+    border: 0.8vw solid white;
+    top: 10vw;
+    left: 3.5vw;
+  }
+
+  .sign {
+    width: 20.4vw;
+    height: 20.4vw;
+  }
+
+  .warning {
+    width: 1.4vw;
+    height: 8vw;
+    margin-top: 4.8vw;
+  }
+
+  .score {
+    width: 51.5vw;
+    top: 0.5vw;
+    left: 1vw;
+    font-size: 4.3vw;
+    gap: 2.5vw;
+  }
+
+  .stars-container {
+    width: 84vw;
+    height: 50vw;
+    gap: 2vw;
+    top: 1.5vw;
+    left: 4vw;
+  }
+
+  .stars-row {
+    gap: 6vw;
+  }
+
+  .star-hope {
+    width: 16vw;
+    height: 15.6vw;
+  }
+
+  .victory-message {
+    font-size: 4.3vw;
+  }
+
+  .game-bar {
+    width: 94vw;
+    height: 15.8vw;
+    border: 0.8vw solid white;
+    top: 17vw;
+    left: 3.5vw;
+    gap: 2.2vw;
+  }
+
+  .sticks {
+    width: 6vw;
+    height: 9.6vw;
+  }
+
+  .pink-buttons {
+    width: 17vw;
+    height: 9.6vw;
+    gap: 1vw;
+  }
+
+  .pink-button {
+    width: 17.2vw;
+    height: 4.2vw;
+  }
+
+  .pink-button-color {
+    width: 17.2vw;
+    height: 4.2vw;
+  }
+
+  .cross {
+    width: 11.6vw;
+    height: 9.6vw;
+  }
+
+  .cross-color {
+    width: 11.6vw;
+    height: 9.6vw;
+  }
+
+  .buttons-w-text {
+    width: 45.8vw;
+    height: 9.4vw;
+    gap: 2vw;
+  }
+
+  .start {
+    width: 21.2vw;
+    height: 9.4vw;
+    border: 0.6vw solid #ff0088;
+    font-size: 4.3vw;
+  }
+
+  .message {
+    width: 21.2vw;
+    height: 9.4vw;
+    border: 0.6vw solid #ff0088;
+    font-size: 4.3vw;
+  }
+
+  .notification {
+    width: 45.4vw;
+    height: 20.3vw;
+    top: 245vw;
+    left: 53vw;
+  }
+
+  .home-button-hope {
+    width: 48vw;
+    height: 48.8vw;
+    top: 135vw;
+    left: 28vw;
+  }
+
+  .blur-home-button-hope {
+    width: 48vw;
+    height: 48.8vw;
+  }
+
+  .hand-hope {
+    width: 127vw;
+    height: 100.8vw;
+    rotate: 210deg;
+    top: 70vw;
+    left: 30vw;
+  }
+
+  .big-icon-hope {
+    width: 100vw;
+    height: 100vw;
+    top: 235vw;
+    left: -12vw;
+  }
+
+  .big-icon-hope-blur {
+    width: 86vw;
+    height: 76vw;
+    top: 23.5vw;
+    left: 20vw;
+  }
+
+  /* экран гнев */
+
+  #anger-screen {
+    height: 430vw;
+  }
+
+  .header-anger {
+    width: 60.4vw;
+    height: 24.2vw;
+    margin: 45vw 0 0 32vw;
+  }
+
+  .path-anger {
+    width: 22vw;
+    height: 153.4vw;
+    margin: 0 0 0 2vw;
+  }
+
+  .anger-print {
+    width: 150vw;
+    height: 90vw;
+    top: -14vw;
+    left: 0;
+  }
+
+  .drawing-space {
+    width: 136.2vw;
+    height: 93.6vw;
+    top: 165vw;
+    left: 0;
+  }
+
+  .squares-anger {
+    width: 7.2vw;
+    height: 5.8vw;
+    border: 0.08vw solid #ff0f00;
+  }
+
+  .anger-scale {
+    width: 94vw;
+    height: 7.4vw;
+    border: 0.2vw solid white;
+    top: 288vw;
+    left: 3vw;
+  }
+
+  .square-anger-scale {
+    width: 5vw;
+    height: 7.2vw;
+    border: 0.3vw solid white;
+  }
+
+  .percentage-anger {
+    width: 21.8vw;
+    height: 12.4vw;
+    font-size: 10.4vw;
+    top: 268vw;
+    left: 20vw;
+  }
+
+  .anger-left {
+    width: 35vw;
+    height: 15.2vw;
+    font-size: 6.4vw;
+    top: 266.5vw;
+    left: 48vw;
+  }
+
+  .moving-text {
+    width: 100%;
+    height: 37.2vw;
+    font-size: 10.4vw;
+    top: 314vw;
+    gap: 2vw;
+  }
+
+  .fst-text-anger {
+    margin-left: 0;
+  }
+
+  .snd-text-anger {
+    margin-left: 36vw;
+  }
+
+  .trd-text-anger {
+    margin-left: 3vw;
+  }
+
+  .big-red-icon-anger {
+    display: none;
+  }
+
+  .big-white-icon-anger {
+    width: 80vw;
+    height: 82vw;
+    top: 60vw;
+    left: 17vw;
+  }
+
+  .home-button-anger {
+    width: 48vw;
+    height: 48.8vw;
+    top: 365vw;
+    left: 26vw;
+  }
+
+  .blur-home-button-anger {
+    width: 48vw;
+    height: 48.8vw;
+  }
+
+  /* экран страх */
+
+  #fear-screen {
+    height: 560vw;
+  }
+
+  .header-fear {
+    width: 70vw;
+    height: 22.3vw;
+    margin: 35vw 0 0 21vw;
+  }
+
+  .big-path-fear {
+    width: 20.6vw;
+    height: 157.6vw;
+    margin-left: 1vw;
+  }
+
+  .small-path-fear {
+    width: 15vw;
+    height: 75.8vw;
+    top: 57.5vw;
+    left: 19vw;
+  }
+
+  .fear-print {
+    width: 100vw;
+    height: 78vw;
+    top: -15vw;
+    left: 7vw;
+  }
+
+  .fear-not-game {
+    width: 89.4vw;
+    height: 188.6vw;
+    border: 0.9vw solid white;
+    top: 170vw;
+    left: 5vw;
+  }
+
+  .green-icon-fear {
+    width: 80vw;
+    height: 77vw;
+    top: 10vw;
+    left: 4vw;
+  }
+
+  .green-circle-fear {
+    width: 32.2vw;
+    height: 32vw;
+    margin: 22vw 0 0 23vw;
+  }
+
+  .green-eyes-fear {
+    width: 14.06vw;
+    height: 5.8vw;
+    margin: 34vw 0 0 32.2vw;
+  }
+
+  .fst-pointer-gr {
+    margin: 0 0 0 33vw;
+  }
+  .snd-pointer-gr {
+    margin: 26.5vw 0 0 6vw;
+  }
+  .trd-pointer-gr {
+    margin: 53vw 0 0 34vw;
+  }
+  .fth-pointer-gr {
+    margin: 25.5vw 0 0 61vw;
+  }
+
+  .green-pointer-fear {
+    width: 11.1vw;
+    height: 24.6vw;
+  }
+
+  .fst-stick-gr {
+    margin: 10.5vw 0 0 11.5vw;
+  }
+  .snd-stick-gr {
+    margin: 45.5vw 0 0 10.5vw;
+  }
+  .trd-stick-gr {
+    margin: 45.5vw 0 0 50vw;
+  }
+  .fth-stick-gr {
+    margin: 11.5vw 0 0 50vw;
+  }
+
+  .green-stick-fear {
+    width: 18vw;
+    height: 20.1vw;
+  }
+
+  .purple-icon-fear {
+    width: 80vw;
+    height: 78vw;
+    top: 16.5vw;
+    left: 4vw;
+  }
+
+  .purple-circle-fear {
+    width: 32.2vw;
+    height: 32vw;
+    margin: 22vw 0 0 23vw;
+  }
+
+  .purple-eyes-fear {
+    width: 14.06vw;
+    height: 5.8vw;
+    margin: 34vw 0 0 32.2vw;
+  }
+
+  .fst-pointer-pr {
+    margin: -2vw 0 0 35vw;
+  }
+  .snd-pointer-pr {
+    margin: 26vw 0 0 7vw;
+  }
+  .trd-pointer-pr {
+    margin: 53vw 0 0 35.5vw;
+  }
+  .fth-pointer-pr {
+    margin: 25.5vw 0 0 63vw;
+  }
+
+  .purple-pointer-fear {
+    width: 8.14vw;
+    height: 26.08vw;
+  }
+
+  .fst-stick-pr {
+    margin: 9vw 0 0 8vw;
+  }
+  .snd-stick-pr {
+    margin: 46vw 0 0 10.5vw;
+  }
+  .trd-stick-pr {
+    margin: 47vw 0 0 49vw;
+  }
+  .fth-stick-pr {
+    margin: 11vw 0 0 52vw;
+  }
+
+  .purple-stick-fear {
+    width: 20.14vw;
+    height: 22.2vw;
+  }
+
+  .fear-normal-text {
+    width: 28.6vw;
+    height: 23.4vw;
+    font-size: 6.4vw;
+    top: 90vw;
+    left: 50vw;
+  }
+
+  .pixel-text-fear {
+    width: 90vw;
+    height: 29.2vw;
+    font-size: 9.6vw;
+    top: 377vw;
+    left: 5vw;
+  }
+
+  .parts-pixel-text {
+    width: 76vw;
+    height: 29.2vw;
+    margin-left: 1.5vw;
+  }
+
+  .parts-pixel-text p:nth-of-type(1) {
+    padding-left: 29vw;
+  }
+
+  .emotion {
+    margin-left: 30.2vw;
+  }
+
+  .word {
+    margin-left: 0.5vw;
+  }
+
+  .ghosts-container {
+    width: 100%;
+    height: 65vw;
+    top: 365vw;
+    left: -10vw;
+    gap: 5vw;
+  }
+
+  .ghosts {
+    width: 53vw;
+    height: 17vw;
+    margin-left: -60vw;
+  }
+  .home-button-fear {
+    width: 48vw;
+    height: 48.8vw;
+    top: 505vw;
+    left: 26vw;
+  }
+
+  .blur-home-button-fear {
+    width: 48vw;
+    height: 48.8vw;
+  }
+
+  .big-icon-fear {
+    width: 100vw;
+    height: 100vw;
+    top: 410vw;
+    left: 0.5vw;
   }
 }

@@ -65,6 +65,16 @@
           </div>
         </div>
       </div>
+
+      <!-- сообщения -->
+
+      <div class="error anxiety"></div>
+      <div class="error crush"></div>
+      <div class="error disgust"></div>
+      <div class="error excitement"></div>
+      <div class="error joy"></div>
+      <div class="error pain"></div>
+      <div class="error sadness"></div>
     </article>
 
     <!-- экран умиротворение -->
@@ -85,6 +95,18 @@
       </div>
       <div class="peace-print"></div>
 
+      <!-- аудио элементы -->
+      <audio class="main-sound" src="audio/main-sound.m4a" loop></audio>
+
+      <audio class="birds-sound" src="audio/birds.m4a"></audio>
+      <audio class="book-sound" src="audio/book.m4a"></audio>
+      <audio class="cooking-sound" src="audio/cooking.m4a"></audio>
+      <audio class="grass-sound" src="audio/grass.m4a"></audio>
+      <audio class="grasshopers-sound" src="audio/grasshopers.m4a"></audio>
+      <audio class="sea-sound" src="audio/sea.m4a"></audio>
+      <audio class="soda-sound" src="audio/soda.m4a"></audio>
+      <audio class="train-sound" src="audio/train.m4a"></audio>
+
       <!-- диджей-пульт -->
       <div class="dj-console">
         <div class="ladder-dj">
@@ -93,20 +115,39 @@
         <!-- кнопки музыка -->
         <div class="buttons">
           <div class="buttons-fst-row">
-            <div class="music-button-dj"></div>
-            <div class="music-button-dj"></div>
-            <div class="music-button-dj"></div>
-            <div class="music-button-dj"></div>
+            <div class="music-button-dj birds-button">
+              <div class="colored-music-button"></div>
+            </div>
+            <div class="music-button-dj book-button">
+              <div class="colored-music-button"></div>
+            </div>
+            <div class="music-button-dj cooking-button">
+              <div class="colored-music-button"></div>
+            </div>
+            <div class="music-button-dj grass-button">
+              <div class="colored-music-button"></div>
+            </div>
           </div>
 
           <div class="buttons-snd-row">
-            <div class="music-button-dj"></div>
-            <div class="music-button-dj"></div>
-            <div class="music-button-dj"></div>
-            <div class="music-button-dj"></div>
+            <div class="music-button-dj grasshopers-button">
+              <div class="colored-music-button"></div>
+            </div>
+            <div class="music-button-dj sea-button">
+              <div class="colored-music-button"></div>
+            </div>
+            <div class="music-button-dj soda-button">
+              <div class="colored-music-button"></div>
+            </div>
+            <div class="music-button-dj train-button">
+              <div class="colored-music-button"></div>
+            </div>
           </div>
         </div>
-        <div class="disc-dj"></div>
+        <div class="disc-dj">
+          <p class="dj-turn-on">нажми</p>
+          <div class="pause-button-dj"></div>
+        </div>
         <div class="second-disc-dj"></div>
         <div class="stick-dj"></div>
         <div class="prod">
@@ -190,7 +231,7 @@
         </div>
         <div class="victory-message">
           <p>
-            теперь ты можешь все, <br />
+            теперь ТЫ можешь все, <br />
             что угодно!
           </p>
         </div>
@@ -242,6 +283,37 @@
       <div class="path-anger"></div>
       <div class="anger-print"></div>
 
+      <!-- рисовашка -->
+      <div class="drawing-space"></div>
+
+      <!-- шкала гнева -->
+      <div class="anger-scale"></div>
+
+      <!-- проценты негатива и текст-->
+      <div class="percentage-anger">
+        <p>0%</p>
+      </div>
+      <div class="anger-left">
+        <p>негатива <br />осталось</p>
+      </div>
+
+      <!-- текст -->
+      <div class="moving-text">
+        <div class="fst-text-anger">
+          <p>выплесни</p>
+        </div>
+        <div class="snd-text-anger">
+          <p>все</p>
+        </div>
+        <div class="trd-text-anger">
+          <p>эмоции</p>
+        </div>
+      </div>
+
+      <!-- большие иконки -->
+      <div class="big-red-icon-anger"></div>
+      <div class="big-white-icon-anger"></div>
+
       <!-- кнопка выхода -->
       <div class="home-button-anger">
         <div class="blur-home-button-anger"></div>
@@ -258,7 +330,36 @@
       <div class="fear-print"></div>
 
       <!-- экран с перетаскиванием -->
-      <div class="fear-not-game"></div>
+      <div class="fear-not-game">
+        <div class="green-icon-fear">
+          <div class="green-circle-fear"></div>
+          <div class="green-eyes-fear"></div>
+          <!-- зеленые стрелки -->
+          <div class="fst-pointer-gr green-pointer-fear"></div>
+          <div class="snd-pointer-gr green-pointer-fear"></div>
+          <div class="trd-pointer-gr green-pointer-fear"></div>
+          <div class="fth-pointer-gr green-pointer-fear"></div>
+          <!--  зеленые палки -->
+          <div class="fst-stick-gr green-stick-fear"></div>
+          <div class="snd-stick-gr green-stick-fear"></div>
+          <div class="trd-stick-gr green-stick-fear"></div>
+          <div class="fth-stick-gr green-stick-fear"></div>
+        </div>
+        <div class="purple-icon-fear">
+          <div class="purple-circle-fear"></div>
+          <div class="purple-eyes-fear"></div>
+          <!-- фиолетовые стрелки -->
+          <div class="fst-pointer-pr purple-pointer-fear"></div>
+          <div class="snd-pointer-pr purple-pointer-fear"></div>
+          <div class="trd-pointer-pr purple-pointer-fear"></div>
+          <div class="fth-pointer-pr purple-pointer-fear"></div>
+          <!--  фиолетовые палки -->
+          <div class="fst-stick-pr purple-stick-fear"></div>
+          <div class="snd-stick-pr purple-stick-fear"></div>
+          <div class="trd-stick-pr purple-stick-fear"></div>
+          <div class="fth-stick-pr purple-stick-fear"></div>
+        </div>
+      </div>
 
       <!-- нормальный текст -->
       <div class="fear-normal-text">
@@ -274,7 +375,16 @@
           <p>эт<span class="green-button">o</span></p>
           <p>прост<span class="green-button">o</span></p>
         </div>
-        <p class="emotion">эм<span class="green-button">o</span>ция</p>
+        <p class="emotion">
+          эм<span class="green-button">o</span> <span class="word">ция</span>
+        </p>
+      </div>
+
+      <!-- отряд привидений -->
+      <div class="ghosts-container">
+        <div class="ghosts"></div>
+        <div class="ghosts"></div>
+        <div class="ghosts"></div>
       </div>
 
       <!-- большая иконка -->

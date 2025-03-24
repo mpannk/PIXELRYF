@@ -1,0 +1,241 @@
+@media screen and (max-width: 500px) {
+  /* главный экран */
+  #main-screen {
+    height: auto;
+  }
+
+  .f-scr-row {
+    flex-direction: column;
+    height: 160vw;
+  }
+
+  .f-scr-bw-peace,
+  .f-scr-bw-hope,
+  .f-scr-bw-anger,
+  .f-scr-bw-fear,
+  .f-scr-text,
+  .f-scr-eye {
+    width: 100%;
+    height: 100%;
+  }
+
+  .f-scr-text {
+    padding: 5vw;
+  }
+
+  .f-scr-main-header {
+    font-size: 4vw;
+  }
+
+  .f-scr-second-header {
+    font-size: 3.5vw;
+  }
+
+  .eye-container {
+    width: 24vw;
+    height: 20vw;
+  }
+
+  .pupil {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  /* подвал */
+  .f-scr-end {
+    height: auto;
+    padding: 5vw 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .the-end-text {
+    width: 90%;
+    gap: 5vw;
+  }
+
+  .white-block {
+    width: 70vw;
+    height: 17vw;
+    border: 0.6vw solid white;
+  }
+
+  .end-headers {
+    font-size: 5vw;
+    margin-top: 2vw;
+    margin-left: 2.4vw;
+  }
+
+  .end-information {
+    font-size: 5vw;
+    margin-top: 2vw;
+    margin-left: 6.8vw;
+  }
+
+  /* отключаем анимацию появления ошибок */
+  .error {
+    display: none;
+  }
+
+  /* экран умиротворение */
+  #peace-screen {
+    height: 450vw;
+  }
+
+  .header-peace {
+    width: 74vw;
+    height: 11.2vw;
+    margin-left: 17vw;
+    margin-top: 12vw;
+  }
+  .paths-peace {
+    width: 53vw;
+    height: 121.8vw;
+    padding-top: 10vw;
+  }
+  .big-path {
+    width: 12.8vw;
+    height: 118.4vw;
+    margin-top: -10vw;
+  }
+
+  .smallest-path {
+    width: 9.8vw;
+    height: 67.2vw;
+  }
+
+  .small-path {
+    width: 8.2vw;
+    height: 84vw;
+  }
+
+  .peace-print {
+    width: 86vw;
+    height: 69.8vw;
+    margin-top: 22.5vw;
+    margin-left: -38vw;
+  }
+
+  .text-peace-container {
+    width: 100vw;
+    height: 105.5vw;
+    margin-top: -40vw;
+    align-items: center;
+  }
+
+  .bold-text-peace,
+  .fst-text-peace,
+  .snd-text-peace,
+  .trd-text-peace {
+    width: 70.4vw;
+    height: 21vw;
+  }
+
+  .bold-text-peace p {
+    font-size: 6.4vw;
+  }
+  .fst-text-peace p,
+  .snd-text-peace p,
+  .trd-text-peace p {
+    font-size: 4.4vw;
+  }
+
+  .dj-console {
+    width: 94vw;
+    height: 100vw;
+    top: 100vw;
+    left: 3.5vw;
+  }
+
+  .ladder-dj {
+    width: 19vw;
+    height: 35.6vw;
+    margin-left: 68vw;
+    margin-top: 5vw;
+  }
+
+  .lever-dj {
+    width: 12.8vw;
+    height: 6.4vw;
+    margin-left: 3vw;
+  }
+  .music-button-dj {
+    width: 11.4vw;
+    height: 14.4vw;
+  }
+
+  .disc-dj {
+    width: 54.6vw;
+    height: 54.2vw;
+    margin-top: 2vw;
+  }
+
+  .dj-turn-on {
+    font-size: 2.6vw;
+  }
+  .buttons {
+    width: 58vw;
+    height: 34vw;
+    margin-top: 60vw;
+    margin-left: 2vw;
+  }
+
+  .buttons-fst-row {
+    width: 58vw;
+    height: 17vw;
+  }
+  .buttons-snd-row {
+    width: 58vw;
+    height: 17vw;
+  }
+
+  .pause-button-dj {
+    width: 10.6vw;
+    height: 9vw;
+    left: 22vw;
+  }
+
+  .second-disc-dj {
+    width: 23vw;
+    height: 23vw;
+    margin-top: 30vw;
+    margin-left: 26vw;
+  }
+
+  .stick-dj {
+    width: 4vw;
+    height: 70vw;
+    margin-top: 2vw;
+    margin-left: 25vw;
+  }
+
+  .prod {
+    width: 20.4vw;
+    height: 12.6vw;
+    border: 0.6vw solid #8f00ff;
+    margin-top: 20vw;
+    margin-left: 27vw;
+    font-size: 2.6vw;
+    padding-top: 3vw;
+  }
+
+  .big-icon-peace {
+    width: 94vw;
+    height: 79vw;
+    top: 315vw;
+    left: 3vw;
+  }
+
+  .home-button-peace {
+    width: 48vw;
+    height: 48.8vw;
+    top: 105vw;
+    left: 25vw;
+  }
+
+  .blur-home-button-peace {
+    width: 48vw;
+    height: 48.8vw;
+  }
+}

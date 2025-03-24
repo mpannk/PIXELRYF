@@ -5,6 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
   matrix()
   gameHope()
   notification()
+  ghosts()
+  draggableFear()
+  movingText()
+  drawingSpace()
+  angerScale()
+  draggableLever()
+  errors()
+  musicDJ()
 })
 
 // переключение экранов
@@ -115,6 +123,7 @@ function matrix() {
 }
 
 // создание матрицы
+
 function createMatrix() {
   let columns = document.querySelectorAll('.numbers-column')
 
@@ -129,6 +138,7 @@ function createMatrix() {
 }
 
 // обновление чисел в матрице
+
 function updateMatrix() {
   let digits = document.querySelectorAll('.digit')
 
@@ -159,6 +169,7 @@ function gameHope() {
     starsContainer.classList.remove('hidden')
 
     // возвращение звезд при повторном запуске
+
     stars.forEach((star) => {
       star.style.visibility = 'visible'
       star.style.opacity = '1'
@@ -172,6 +183,7 @@ function gameHope() {
         scoreText.textContent = score
 
         // плавное исчезновение
+
         star.style.opacity = '0'
         setTimeout(() => {
           star.style.visibility = 'hidden'
@@ -183,6 +195,8 @@ function gameHope() {
       }
     })
   })
+
+  //   победное сообщение
 
   function displayVictoryMessage() {
     victoryMessage.style.display = 'block'
@@ -209,5 +223,376 @@ function notification() {
 
   notification.addEventListener('click', () => {
     notification.classList.add('hidden')
+  })
+}
+
+// отряд привидений вылетает по клику
+
+function ghosts() {
+  let greenButtons = document.querySelectorAll('.green-button')
+  let ghosts = document.querySelectorAll('.ghosts')
+
+  greenButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      let ghost = ghosts[index]
+      ghost.classList.remove('animate-ghost')
+      void ghost.offsetWidth
+      ghost.classList.add('animate-ghost')
+    })
+  })
+}
+
+// перетаскивание элементов страха
+
+function draggableFear() {
+  let draggableElements = document.querySelectorAll(
+    '.green-icon-fear > div, .purple-icon-fear > div'
+  )
+
+  let container = document.querySelector('.fear-not-game')
+  let isDragging = false
+  let currentElement = null
+  let offsetX = 0
+  let offsetY = 0
+
+  draggableElements.forEach((element) => {
+    element.style.cursor = 'grab'
+
+    element.addEventListener('mousedown', (e) => {
+      e.preventDefault()
+      isDragging = true
+      currentElement = element
+
+      let containerRect = container.getBoundingClientRect()
+      let elementRect = element.getBoundingClientRect()
+
+      // удалить марджин!
+
+      element.style.margin = '0'
+
+      offsetX = e.clientX - elementRect.left
+      offsetY = e.clientY - elementRect.top
+
+      element.style.position = 'absolute'
+      element.style.zIndex = '1000'
+      element.style.pointerEvents = 'none'
+      element.style.cursor = 'grabbing'
+      element.style.left = `${elementRect.left - containerRect.left}px`
+      element.style.top = `${elementRect.top - containerRect.top}px`
+
+      container.appendChild(element)
+    })
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging || !currentElement) return
+
+      let containerRect = container.getBoundingClientRect()
+
+      let newX = e.clientX - containerRect.left - offsetX
+      let newY = e.clientY - containerRect.top - offsetY
+
+      //   ограничение перемещения в пределах родительского контейнера
+
+      newX = Math.max(
+        0,
+        Math.min(newX, containerRect.width - currentElement.offsetWidth)
+      )
+      newY = Math.max(
+        0,
+        Math.min(newY, containerRect.height - currentElement.offsetHeight)
+      )
+
+      currentElement.style.left = `${newX}px`
+      currentElement.style.top = `${newY}px`
+    })
+
+    document.addEventListener('mouseup', () => {
+      if (currentElement) {
+        currentElement.style.pointerEvents = 'auto'
+        currentElement.style.cursor = 'grab'
+        currentElement.style.margin = '0'
+      }
+      isDragging = false
+      currentElement = null
+    })
+  })
+}
+
+// анимация движения текста в гневе
+
+function movingText() {
+  let firstText = document.querySelector('.fst-text-anger')
+  let secondText = document.querySelector('.snd-text-anger')
+  let thirdText = document.querySelector('.trd-text-anger')
+
+  firstText.addEventListener('click', () => {
+    firstText.classList.toggle('paused')
+  })
+
+  secondText.addEventListener('click', () => {
+    secondText.classList.toggle('paused')
+  })
+
+  thirdText.addEventListener('click', () => {
+    thirdText.classList.toggle('paused')
+  })
+}
+
+// рисовашка по клеточкам
+
+function drawingSpace() {
+  let drawingSpace = document.querySelector('.drawing-space')
+  let totalSquares = 288
+  let isDrawing = false
+  let attempts = 0
+
+  // сброс всех квадратов
+
+  function resetSquares() {
+    let squares = document.querySelectorAll('.squares-anger')
+    squares.forEach((square) => {
+      square.classList.remove('active')
+    })
+    updateAngerScale()
+  }
+
+  // обновление шкалы гнева
+
+  function updateAngerScale() {
+    let activeSquares = document.querySelectorAll(
+      '.squares-anger.active'
+    ).length
+    let scaleSquares = document.querySelectorAll('.square-anger-scale')
+    let threshold = Math.ceil(
+      (activeSquares / totalSquares) * scaleSquares.length
+    )
+    let percentageElement = document.querySelector('.percentage-anger')
+
+    scaleSquares.forEach((square, index) => {
+      if (index < threshold) {
+        square.classList.add('active')
+      } else {
+        square.classList.remove('active')
+      }
+    })
+
+    // обновление процента
+
+    let percentage = Math.max(1, 100 - threshold * 5)
+    percentageElement.textContent = `${percentage}%`
+  }
+
+  // создание квадратиков
+
+  for (let i = 0; i < totalSquares; i++) {
+    let square = document.createElement('div')
+    square.classList.add('squares-anger')
+    drawingSpace.appendChild(square)
+
+    square.addEventListener('mousedown', () => {
+      isDrawing = true
+      square.classList.add('active')
+      updateAngerScale()
+    })
+
+    square.addEventListener('mouseover', () => {
+      if (isDrawing) {
+        square.classList.add('active')
+        updateAngerScale()
+      }
+    })
+
+    square.addEventListener('mouseup', () => {
+      isDrawing = false
+      attempts++
+      if (attempts >= 3) {
+        setTimeout(resetSquares, 1000)
+        attempts = 0
+      }
+    })
+  }
+
+  // чтобы не выходить за пределы
+
+  drawingSpace.addEventListener('mouseleave', () => {
+    isDrawing = false
+  })
+}
+
+// шкала гнева
+
+function angerScale() {
+  let angerScale = document.querySelector('.anger-scale')
+  let totalScaleSquares = 20
+  let percentageElement = document.querySelector('.percentage-anger')
+
+  // начальное значение процента
+
+  percentageElement.textContent = '100%'
+
+  for (let i = 0; i < totalScaleSquares; i++) {
+    let square = document.createElement('div')
+    square.classList.add('square-anger-scale')
+    angerScale.appendChild(square)
+  }
+}
+
+// перетаскивание рычага на диджей-пульте
+
+function draggableLever() {
+  let lever = document.querySelector('.lever-dj')
+  let ladder = document.querySelector('.ladder-dj')
+  let isDragging = false
+  let startY = 0
+  let leverTop = 0
+
+  lever.addEventListener('mousedown', (e) => {
+    isDragging = true
+    startY = e.clientY
+    leverTop = lever.offsetTop
+    lever.style.cursor = 'grabbing'
+  })
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return
+
+    let deltaY = e.clientY - startY
+    let newTop = leverTop + deltaY
+
+    let ladderRect = ladder.getBoundingClientRect()
+    let leverRect = lever.getBoundingClientRect()
+
+    newTop = Math.max(0, Math.min(newTop, ladderRect.height - leverRect.height))
+
+    lever.style.top = `${newTop}px`
+  })
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false
+    lever.style.cursor = 'grab'
+  })
+}
+
+// появление ошибок при загрузке плаката
+
+function errors() {
+  let errors = document.querySelectorAll('.error')
+  let shownErrors = new Set()
+
+  // получение случайной позиции
+
+  function getRandomPosition(error) {
+    error.style.opacity = '0'
+    error.style.display = 'block'
+
+    let errorRect = error.getBoundingClientRect()
+    let maxX = window.innerWidth - errorRect.width
+    let maxY = window.innerHeight - errorRect.height
+
+    // возвращение таблички обратно
+
+    error.style.opacity = ''
+    error.style.display = ''
+
+    return {
+      x: Math.random() * maxX,
+      y: Math.random() * maxY
+    }
+  }
+
+  function showError(error) {
+    let position = getRandomPosition(error)
+    error.style.left = `${position.x}px`
+    error.style.top = `${position.y}px`
+    error.classList.add('visible')
+  }
+
+  function hideError(error) {
+    error.classList.add('hidden')
+    shownErrors.add(error)
+  }
+
+  // задержка ошибок
+
+  errors.forEach((error, index) => {
+    setTimeout(() => {
+      if (!shownErrors.has(error)) {
+        showError(error)
+      }
+    }, index * 500)
+  })
+
+  errors.forEach((error) => {
+    error.addEventListener('click', () => {
+      hideError(error)
+    })
+  })
+}
+
+// музыка на диджей-пульте
+
+function musicDJ() {
+  let mainSound = document.querySelector('.main-sound')
+  let pauseButton = document.querySelector('.pause-button-dj')
+  let discDj = document.querySelector('.disc-dj')
+  let secondDiscDj = document.querySelector('.second-disc-dj')
+  let djTurnOn = document.querySelector('.dj-turn-on')
+  let buttonSoundMap = {
+    'birds-button': 'birds-sound',
+    'book-button': 'book-sound',
+    'cooking-button': 'cooking-sound',
+    'grass-button': 'grass-sound',
+    'grasshopers-button': 'grasshopers-sound',
+    'sea-button': 'sea-sound',
+    'soda-button': 'soda-sound',
+    'train-button': 'train-sound'
+  }
+
+  // вращение дисков при включении музыки
+
+  function rotateDiscs(isPlaying) {
+    if (isPlaying) {
+      discDj.classList.add('playing')
+      secondDiscDj.classList.add('playing')
+    } else {
+      discDj.classList.remove('playing')
+      secondDiscDj.classList.remove('playing')
+    }
+  }
+
+  // кнопка паузы
+
+  pauseButton.addEventListener('click', () => {
+    if (mainSound.paused) {
+      mainSound.play()
+      pauseButton.classList.remove('pause')
+      pauseButton.classList.add('active')
+      djTurnOn.style.opacity = '0'
+      rotateDiscs(true)
+    } else {
+      mainSound.pause()
+      pauseButton.classList.add('pause')
+      pauseButton.classList.remove('active')
+      djTurnOn.style.opacity = '1'
+      rotateDiscs(false)
+    }
+  })
+
+  // кнопки музыки
+
+  Object.entries(buttonSoundMap).forEach(([buttonClass, soundClass]) => {
+    let button = document.querySelector(`.${buttonClass}`)
+    let sound = document.querySelector(`.${soundClass}`)
+    let coloredButton = button.querySelector('.colored-music-button')
+
+    button.addEventListener('click', () => {
+      if (sound.paused) {
+        sound.play()
+        coloredButton.classList.add('active')
+      } else {
+        sound.pause()
+        coloredButton.classList.remove('active')
+      }
+    })
   })
 }

@@ -15,7 +15,80 @@ body {
   visibility: hidden;
 }
 
+/* сообщения */
+
+.error {
+  width: 47.7vw;
+  height: 26.9vw;
+  position: fixed;
+  opacity: 0;
+  transform: scale(0.8);
+  /* cursor: pointer; */
+  z-index: 100;
+}
+
+.error.visible {
+  opacity: 1;
+}
+
+.anxiety {
+  background-image: url(../images/error-anxiety.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.crush {
+  background-image: url(../images/error-crush.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.disgust {
+  background-image: url(../images/error-disgust.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.excitement {
+  background-image: url(../images/error-excitement.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.joy {
+  background-image: url(../images/error-joy.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.pain {
+  background-image: url(../images/error-pain.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sadness {
+  background-image: url(../images/error-sadness.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 /* главный экран */
+
+#main-screen {
+  cursor: url('../images/tiny-white-cursor.webp'), auto;
+}
+
+#main-screen:active {
+  cursor: url('../images/tiny-black-cursor.webp'), auto;
+}
 
 /* контейнеры для блоков */
 
@@ -29,27 +102,65 @@ body {
   height: 40vw;
 }
 
-/* умиротворение  */
+/* блоки главного экрана */
 
-.f-scr-bw-peace {
+.f-scr-bw-peace,
+.f-scr-bw-hope,
+.f-scr-bw-anger,
+.f-scr-bw-fear {
   width: 50%;
   height: 100%;
   position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.f-scr-bw-peace {
   background-image: url(../images/1scr-bw-peace.webp);
+}
+
+.f-scr-bw-hope {
+  background-image: url(../images/1scr-bw-hope.webp);
+}
+
+.f-scr-bw-anger {
+  background-image: url(../images/1scr-bw-anger.webp);
+}
+
+.f-scr-bw-fear {
+  background-image: url(../images/1scr-bw-fear.webp);
+}
+
+/* цветные блоки */
+
+.f-scr-peace-color,
+.f-scr-hope-color,
+.f-scr-anger-color,
+.f-scr-fear-color {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .f-scr-peace-color {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
   background-image: url(../images/f-scr-peace-color.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+}
+
+.f-scr-hope-color {
+  background-image: url(../images/f-scr-hope-color.webp);
+}
+
+.f-scr-anger-color {
+  background-image: url(../images/f-scr-anger-color.webp);
+}
+
+.f-scr-fear-color {
+  background-image: url(../images/f-scr-fear-color.webp);
 }
 
 /* текстовый блок */
@@ -115,74 +226,6 @@ body {
   background-size: cover;
 }
 
-/* надежда */
-
-.f-scr-bw-hope {
-  width: 50%;
-  height: 100%;
-  position: relative;
-  background-image: url(../images/1scr-bw-hope.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.f-scr-hope-color {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
-  background-image: url(../images/f-scr-hope-color.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-/* гнев */
-
-.f-scr-bw-anger {
-  width: 50%;
-  height: 100%;
-  position: relative;
-  background-image: url(../images/1scr-bw-anger.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.f-scr-anger-color {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
-  background-image: url(../images/f-scr-anger-color.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-/* страх */
-
-.f-scr-bw-fear {
-  width: 50%;
-  height: 100%;
-  position: relative;
-  background-image: url(../images/1scr-bw-fear.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.f-scr-fear-color {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
-  background-image: url(../images/f-scr-fear-color.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 /* подвал */
 
 .f-scr-end {
@@ -237,7 +280,14 @@ body {
   height: 111vw;
   position: relative;
   overflow: hidden;
+  cursor: url('../images/tiny-white-cursor.webp'), auto;
 }
+
+#peace-screen:active {
+  cursor: url('../images/tiny-yellow-cursor.webp'), auto;
+}
+
+/* верхняя часть */
 
 .header-peace {
   position: absolute;
@@ -322,6 +372,7 @@ body {
   background-position: center;
   background-size: cover;
   margin-left: 1.5vw;
+  /* cursor: grab; */
 }
 
 .buttons {
@@ -363,6 +414,25 @@ body {
   background-size: cover;
 }
 
+.colored-music-button {
+  width: 6.4vw;
+  height: 8vw;
+  position: absolute;
+  background-image: url(../images/colored-music-button.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+}
+
+/* аудио элементы */
+audio {
+  position: fixed;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .disc-dj {
   width: 30.5vw;
   height: 30vw;
@@ -371,8 +441,32 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 1.5vw;
   left: 2vw;
+}
+
+.pause-button-dj {
+  width: 3.8vw;
+  height: 4.5vw;
+  position: absolute;
+  background-image: url(../images/pause-button.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  left: 13.4vw;
+  opacity: 0;
+  z-index: 20;
+}
+
+.dj-turn-on {
+  font-family: 'PixelifySans';
+  font-size: 1.7vw;
+  font-weight: 400;
+  color: #8f00ff;
+  text-align: center;
 }
 
 .second-disc-dj {
@@ -489,6 +583,7 @@ body {
   background-position: center;
   background-size: cover;
   opacity: 0;
+  /* cursor: pointer; */
 }
 
 /* большая иконка */
@@ -504,6 +599,7 @@ body {
   top: 63vw;
   left: 15vw;
   transform: translateX(0%);
+  pointer-events: none;
 }
 
 /* экран надежда */
@@ -513,7 +609,14 @@ body {
   height: 111vw;
   position: relative;
   overflow: hidden;
+  cursor: url('../images/tiny-white-cursor.webp'), auto;
 }
+
+#hope-screen:active {
+  cursor: url('../images/tiny-pink-cursor.webp'), auto;
+}
+
+/* верхняя часть */
 
 .header-hope {
   position: absolute;
@@ -656,6 +759,7 @@ body {
   background-position: center;
   background-size: cover;
   z-index: 15;
+  /* cursor: pointer; */
 }
 
 .victory-message {
@@ -766,6 +870,7 @@ body {
   font-weight: 400;
   color: #00ff76;
   z-index: 10;
+  /* cursor: pointer; */
 }
 
 .message {
@@ -780,6 +885,7 @@ body {
   font-weight: 400;
   color: #00ff76;
   z-index: 10;
+  /* cursor: pointer; */
 }
 
 /* сообщение  */
@@ -820,6 +926,7 @@ body {
   background-position: center;
   background-size: cover;
   opacity: 0;
+  /* cursor: pointer; */
 }
 
 /* рука */
@@ -869,7 +976,14 @@ body {
   height: 111vw;
   position: relative;
   overflow: hidden;
+  cursor: url('../images/tiny-white-cursor.webp'), auto;
 }
+
+#anger-screen:active {
+  cursor: url('../images/tiny-red-cursor.webp'), auto;
+}
+
+/* верхняя часть */
 
 .header-anger {
   position: absolute;
@@ -904,6 +1018,144 @@ body {
   left: 32vw;
 }
 
+/* рисовашка  */
+
+.drawing-space {
+  width: 77.5vw;
+  height: 38.9vw;
+  position: absolute;
+  background-color: #00efff;
+  top: 22.2vw;
+  left: 13.6vw;
+  display: flex;
+  flex-wrap: wrap;
+  border-collapse: collapse;
+}
+
+.squares-anger {
+  width: 3.2295vw;
+  height: 3.24vw;
+  border: 0.06vw solid #ff0f00;
+  box-sizing: border-box;
+  /* cursor: pointer; */
+}
+
+.squares-anger.active {
+  background-color: #ff0f00;
+}
+
+/* шкала гнева */
+
+.anger-scale {
+  width: 55vw;
+  height: 3.4vw;
+  position: absolute;
+  border: 0.2vw solid white;
+  display: flex;
+  border-collapse: collapse;
+  top: 66vw;
+  left: 36vw;
+}
+
+.square-anger-scale {
+  width: 3.1vw;
+  height: 3.1vw;
+  border: 0.1vw solid white;
+  background-color: #ff0f00;
+}
+
+.square-anger-scale.active {
+  background-color: #000000;
+}
+
+/* проценты негатива и текст*/
+
+.percentage-anger {
+  width: 8.4vw;
+  height: 4.8vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-family: 'PixelifySans';
+  font-weight: 400;
+  font-size: 4vw;
+  color: #00efff;
+  top: 66vw;
+  left: 13.5vw;
+}
+
+.anger-left {
+  width: 13.5vw;
+  height: 5.8vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-family: 'PixelifySans';
+  font-weight: 400;
+  font-size: 2.4vw;
+  color: #00efff;
+  top: 65.2vw;
+  left: 22.5vw;
+}
+
+/* текст большой*/
+
+.moving-text {
+  width: 100%;
+  height: 16.9vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'PublicPixel';
+  font-weight: 400;
+  font-size: 4.8vw;
+  color: #ff0f00;
+  top: 73.1vw;
+  gap: 1vw;
+}
+
+.fst-text-anger {
+  margin-left: 13.6vw;
+  z-index: 25;
+}
+
+.snd-text-anger {
+  margin-left: 43.1vw;
+  z-index: 25;
+}
+
+.trd-text-anger {
+  margin-left: 50.2vw;
+  z-index: 25;
+}
+
+/* большие иконки */
+
+.big-red-icon-anger {
+  width: 69.3vw;
+  height: 75.9vw;
+  position: absolute;
+  background-image: url(../images/big-red-icon-anger.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 82vw;
+  left: 50vw;
+}
+
+.big-white-icon-anger {
+  width: 73.2vw;
+  height: 77.4vw;
+  position: absolute;
+  background-image: url(../images/big-white-icon-anger.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 70vw;
+  left: -17vw;
+}
+
 /* кнопка домой */
 
 .home-button-anger {
@@ -928,6 +1180,7 @@ body {
   background-size: cover;
   opacity: 0;
   z-index: 5;
+  /* cursor: pointer; */
 }
 
 /* экран страх */
@@ -937,7 +1190,14 @@ body {
   height: 111vw;
   position: relative;
   overflow: hidden;
+  cursor: url('../images/tiny-white-cursor.webp'), auto;
 }
+
+#fear-screen:active {
+  cursor: url('../images/tiny-green-cursor.webp'), auto;
+}
+
+/* верхняя часть */
 
 .header-fear {
   position: absolute;
@@ -995,6 +1255,202 @@ body {
   left: 20.7vw;
 }
 
+/* зеленая иконка */
+
+.green-icon-fear {
+  width: 38vw;
+  height: 32.5vw;
+  position: relative;
+  top: 2vw;
+}
+
+.green-circle-fear {
+  width: 13vw;
+  height: 13vw;
+  position: absolute;
+  background-image: url(../images/green-circle-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 9.5vw 0vw 0vw 11.8vw;
+  /* cursor: pointer; */
+}
+
+.green-eyes-fear {
+  width: 5.7vw;
+  height: 2.5vw;
+  position: absolute;
+  background-image: url(../images/green-eyes-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 14vw 0vw 0vw 15.5vw;
+  /* cursor: pointer; */
+}
+
+/* зеленые стрелки */
+
+.fst-pointer-gr {
+  margin: -0.8vw 0vw 0vw 15.7vw;
+  /* cursor: pointer; */
+}
+.snd-pointer-gr {
+  margin: 11vw 0vw 0vw 4.5vw;
+  rotate: 270deg;
+  /* cursor: pointer; */
+}
+.trd-pointer-gr {
+  margin: 22.2vw 0vw 0vw 16vw;
+  rotate: 180deg;
+  /* cursor: pointer; */
+}
+.fth-pointer-gr {
+  margin: 10.5vw 0vw 0vw 27.5vw;
+  rotate: 90deg;
+  /* cursor: pointer; */
+}
+
+.green-pointer-fear {
+  width: 5vw;
+  height: 10.7vw;
+  position: absolute;
+  background-image: url(../images/green-pointer-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* зеленые палки */
+
+.fst-stick-gr {
+  margin: 3.2vw 0vw 0vw 6vw;
+  /* cursor: pointer; */
+}
+.snd-stick-gr {
+  margin: 19.5vw 0vw 0vw 5.9vw;
+  rotate: 270deg;
+  /* cursor: pointer; */
+}
+.trd-stick-gr {
+  margin: 19.5vw 0vw 0vw 21.5vw;
+  rotate: 180deg;
+  /* cursor: pointer; */
+}
+.fth-stick-gr {
+  margin: 3.2vw 0vw 0vw 22vw;
+  rotate: 90deg;
+  /* cursor: pointer; */
+}
+
+.green-stick-fear {
+  width: 9vw;
+  height: 10vw;
+  position: absolute;
+  background-image: url(../images/green-stick-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* фиолетовая иконка */
+
+.purple-icon-fear {
+  width: 38vw;
+  height: 32.5vw;
+  position: relative;
+  top: -16.5vw;
+  left: 30vw;
+  z-index: 10;
+}
+
+.purple-circle-fear {
+  width: 13vw;
+  height: 13vw;
+  position: absolute;
+  background-image: url(../images/purple-circle-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 9.5vw 0vw 0vw 11.8vw;
+  /* cursor: pointer; */
+}
+
+.purple-eyes-fear {
+  width: 5.7vw;
+  height: 2.5vw;
+  position: absolute;
+  background-image: url(../images/purple-eyes-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 14vw 0vw 0vw 15.5vw;
+  /* cursor: pointer; */
+}
+
+/* фиолетовые стрелки */
+
+.fst-pointer-pr {
+  margin: -2vw 0vw 0vw 16.2vw;
+  /* cursor: pointer; */
+}
+.snd-pointer-pr {
+  margin: 10vw 0vw 0vw 4.5vw;
+  rotate: 270deg;
+  /* cursor: pointer; */
+}
+.trd-pointer-pr {
+  margin: 22.2vw 0vw 0vw 16.2vw;
+  rotate: 180deg;
+  /* cursor: pointer; */
+}
+.fth-pointer-pr {
+  margin: 10vw 0vw 0vw 28.5vw;
+  rotate: 90deg;
+  /* cursor: pointer; */
+}
+
+.purple-pointer-fear {
+  width: 4vw;
+  height: 11.8vw;
+  position: absolute;
+  background-image: url(../images/purple-pointer-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* фиолетовые палки */
+
+.fst-stick-pr {
+  margin: 3.2vw 0vw 0vw 6vw;
+  /* cursor: pointer; */
+}
+.snd-stick-pr {
+  margin: 19.5vw 0vw 0vw 5.9vw;
+  rotate: 270deg;
+  /* cursor: pointer; */
+}
+.trd-stick-pr {
+  margin: 19.5vw 0vw 0vw 21.5vw;
+  rotate: 180deg;
+  /* cursor: pointer; */
+}
+.fth-stick-pr {
+  margin: 3.2vw 0vw 0vw 22vw;
+  rotate: 90deg;
+  /* cursor: pointer; */
+}
+
+.purple-stick-fear {
+  width: 9vw;
+  height: 10vw;
+  position: absolute;
+  background-image: url(../images/purple-stick-fear.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 /* нормальный текст */
 
 .fear-normal-text {
@@ -1013,7 +1469,7 @@ body {
 /* пискельный текст */
 
 .pixel-text-fear {
-  width: 53vw;
+  width: 56vw;
   height: 18.2vw;
   position: absolute;
   display: flex;
@@ -1046,6 +1502,37 @@ body {
 
 .green-button {
   color: #009e37;
+  /* cursor: pointer; */
+  position: absolute;
+  z-index: 20;
+}
+
+.word {
+  margin-left: 0.5vw;
+}
+
+/* отряд привидений */
+
+.ghosts-container {
+  width: 100%;
+  height: 30vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 75vw;
+}
+
+.ghosts {
+  width: 30.8vw;
+  height: 9.8vw;
+  background-image: url(../images/ghosts.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  left: -35vw;
+  opacity: 0;
 }
 
 /* кнопка домой */
@@ -1071,6 +1558,7 @@ body {
   background-position: center;
   background-size: cover;
   opacity: 0;
+  /* cursor: pointer; */
 }
 
 /* большая иконка */

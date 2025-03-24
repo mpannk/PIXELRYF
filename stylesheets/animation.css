@@ -80,25 +80,56 @@
   transition: opacity 0.5s ease-in-out;
 }
 
+/* перемещение рычага */
+
+lever-dj {
+  transition: cursor 0.2s ease;
+}
+
+/* вращение дисков на пульте  */
+
+.disc-dj.playing {
+  animation: rotate 4s linear infinite;
+}
+
+.second-disc-dj.playing {
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* окрашивание кнопок на пульте */
+
+.colored-music-button {
+  transition: opacity 0.3s ease;
+}
+
+.colored-music-button.active {
+  opacity: 1;
+}
+
+/* кнопка паузы */
+
+.pause-button-dj {
+  transition: opacity 0.3s ease;
+}
+
+.pause-button-dj.active {
+  opacity: 1;
+}
+
+.dj-turn-on {
+  transition: opacity 0.3s ease;
+}
+
 /* экран надежда */
-
-/* плавная смена цифр */
-
-.digit {
-  animation: matrixflicker 3s infinite;
-}
-
-@keyframes matrixflicker {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 /* плавное исчезновение звезд в игре */
 
@@ -175,4 +206,151 @@
   100% {
     opacity: 0;
   }
+}
+
+/* экран страх */
+
+/* отряд привидений */
+.animate-ghost {
+  animation: moveGhost 4s linear forwards;
+  opacity: 1;
+}
+
+@keyframes moveGhost {
+  0% {
+    transform: translateX(-55vw);
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(10deg);
+    transform: translateX(25vw);
+  }
+  100% {
+    left: 105vw;
+    transform: rotate(-5deg);
+    transform: translateX(75vw);
+  }
+}
+
+/* большая иконка крутится вокруг своей оси */
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.big-icon-fear {
+  animation: rotateIcon 14s linear infinite;
+}
+
+/* экран гнев */
+
+/* анимация прыжков для иконок */
+.big-red-icon-anger {
+  animation: jump 2s infinite ease-in-out;
+}
+
+.big-white-icon-anger {
+  animation: jump 2s infinite ease-in-out;
+  animation-delay: 1s;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* анимация движения текста */
+.fst-text-anger {
+  animation: moveText1 2s infinite linear;
+  cursor: pointer;
+  transform: translateX(0);
+}
+
+.snd-text-anger {
+  animation: moveText2 2.5s infinite linear;
+  cursor: pointer;
+  transform: translateX(0);
+}
+
+.trd-text-anger {
+  animation: moveText3 2.2s infinite linear;
+  cursor: pointer;
+  transform: translateX(0);
+}
+
+.fst-text-anger.paused,
+.snd-text-anger.paused,
+.trd-text-anger.paused {
+  animation: none;
+  transform: translateX(0);
+}
+
+@keyframes moveText1 {
+  0% {
+    transform: translateX(-3vw);
+  }
+  50% {
+    transform: translateX(20vw);
+  }
+  100% {
+    transform: translateX(-3vw);
+  }
+}
+
+@keyframes moveText2 {
+  0% {
+    transform: translateX(10vw);
+  }
+  50% {
+    transform: translateX(-15vw);
+  }
+  100% {
+    transform: translateX(10vw);
+  }
+}
+
+@keyframes moveText3 {
+  0% {
+    transform: translateX(-5vw);
+  }
+  50% {
+    transform: translateX(20vw);
+  }
+  100% {
+    transform: translateX(-5vw);
+  }
+}
+
+/* рисовашка */
+
+.squares-anger {
+  transition: background-color 0.1s ease;
+}
+
+.squares-anger:hover {
+  background-color: rgba(255, 15, 0, 0.1);
+}
+
+.square-anger-scale {
+  transition: background-color 0.3s ease;
+}
+
+.error {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.error.visible {
+  transform: scale(1);
 }

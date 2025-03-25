@@ -15,7 +15,7 @@ body {
   visibility: hidden;
 }
 
-/* сообщения */
+/* выскакивающие ошибочки */
 
 .error {
   width: 47.7vw;
@@ -341,6 +341,15 @@ body {
   left: 51.5vw;
 }
 
+/* звуки */
+
+audio {
+  position: fixed;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* диджей-пульт */
 
 .dj-console {
@@ -423,15 +432,6 @@ body {
   background-position: center;
   background-size: cover;
   opacity: 0;
-}
-
-/* звуки */
-
-audio {
-  position: fixed;
-  z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .disc-dj {
@@ -678,7 +678,6 @@ audio {
   font-size: 3.5vw;
   font-weight: 400;
   color: #00ff76;
-  opacity: 1;
 }
 
 /* экран с игрой */
@@ -1099,7 +1098,7 @@ audio {
   left: 22.5vw;
 }
 
-/* текст большой*/
+/* текст большой */
 
 .moving-text {
   width: 100%;

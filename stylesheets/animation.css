@@ -1,5 +1,15 @@
 /* главный экран */
 
+/* выскакивающие ошибки */
+
+.error {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.error.visible {
+  transform: scale(1);
+}
+
 /* блоки окрашиваются при наведении */
 
 .f-scr-peace-color:hover {
@@ -86,7 +96,7 @@ lever-dj {
   transition: cursor 0.2s ease;
 }
 
-/* вращение дисков на пульте  */
+/* вращение дисков на пульте */
 
 .disc-dj.playing {
   animation: rotate 4s linear infinite;
@@ -208,48 +218,10 @@ lever-dj {
   }
 }
 
-/* экран страх */
-
-/* отряд привидений */
-.animate-ghost {
-  animation: moveGhost 4s linear forwards;
-  opacity: 1;
-}
-
-@keyframes moveGhost {
-  0% {
-    transform: translateX(-55vw);
-    transform: rotate(-5deg);
-  }
-  50% {
-    transform: rotate(10deg);
-    transform: translateX(25vw);
-  }
-  100% {
-    left: 105vw;
-    transform: rotate(-5deg);
-    transform: translateX(75vw);
-  }
-}
-
-/* большая иконка крутится вокруг своей оси */
-
-@keyframes rotateIcon {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.big-icon-fear {
-  animation: rotateIcon 14s linear infinite;
-}
-
 /* экран гнев */
 
-/* анимация прыжков для иконок */
+/* анимация прыжков для больших иконок */
+
 .big-red-icon-anger {
   animation: jump 2s infinite ease-in-out;
 }
@@ -271,7 +243,8 @@ lever-dj {
   }
 }
 
-/* анимация движения текста */
+/* анимация движения пиксельного текста */
+
 .fst-text-anger {
   animation: moveText1 2s infinite linear;
   cursor: pointer;
@@ -290,9 +263,9 @@ lever-dj {
   transform: translateX(0);
 }
 
-.fst-text-anger.paused,
-.snd-text-anger.paused,
-.trd-text-anger.paused {
+.fst-text-anger .paused,
+.snd-text-anger .paused,
+.trd-text-anger .paused {
   animation: none;
   transform: translateX(0);
 }
@@ -347,10 +320,42 @@ lever-dj {
   transition: background-color 0.3s ease;
 }
 
-.error {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+/* экран страх */
+
+/* отряд привидений */
+
+.animate-ghost {
+  animation: moveGhost 4s linear forwards;
+  opacity: 1;
 }
 
-.error.visible {
-  transform: scale(1);
+@keyframes moveGhost {
+  0% {
+    transform: translateX(-55vw);
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(10deg);
+    transform: translateX(25vw);
+  }
+  100% {
+    left: 105vw;
+    transform: rotate(-5deg);
+    transform: translateX(75vw);
+  }
+}
+
+/* большая иконка крутится вокруг своей оси */
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.big-icon-fear {
+  animation: rotateIcon 14s linear infinite;
 }

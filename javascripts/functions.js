@@ -145,7 +145,6 @@ function updateMatrix() {
   digits.forEach((digit) => {
     if (Math.random() < 0.7) {
       digit.textContent = digit.textContent === '0' ? '1' : '0'
-      digit.style.color = Math.random() < 0.5 ? '#00ff76' : '#000000'
     }
   })
 }

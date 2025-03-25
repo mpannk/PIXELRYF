@@ -42,6 +42,19 @@
     height: 20vw;
   }
 
+  .f-scr-peace-color:hover {
+    border: 0.6vw solid #fff490;
+  }
+  .f-scr-hope-color:hover {
+    border: 0.6vw solid #ff0088;
+  }
+  .f-scr-anger-color:hover {
+    border: 0.6vw solid #bf0c00;
+  }
+  .f-scr-fear-color:hover {
+    border: 0.6vw solid #009e37;
+  }
+
   /* подвал */
 
   .f-scr-end {
@@ -85,7 +98,7 @@
     margin-left: 6.8vw;
   }
 
-  /* анимация появления ошибок будет странно смотреться на мобилке, отключаем */
+  /* анимация появления ошибок будет странно смотреться на мобилке*/
   .error {
     display: none;
   }
@@ -286,7 +299,7 @@
     width: 31.4vw;
     height: 84.8vw;
     top: 60vw;
-    left: 16.5vw;
+    left: 17vw;
     gap: 4vw;
   }
 
@@ -318,10 +331,10 @@
   }
 
   .score {
-    width: 51.5vw;
+    width: 55.5vw;
     top: 0.5vw;
     left: 1vw;
-    font-size: 4.3vw;
+    font-size: 4.2vw;
     gap: 2.5vw;
   }
 
@@ -474,15 +487,15 @@
 
   .drawing-space {
     width: 136.2vw;
-    height: 93.6vw;
+    height: 95vw;
     top: 165vw;
     left: 0;
   }
 
   .squares-anger {
     width: 7.2vw;
-    height: 5.8vw;
-    border: 0.08vw solid #ff0f00;
+    height: 5.9vw;
+    border: 0.18vw solid #ff0f00;
   }
 
   .anger-scale {
@@ -524,7 +537,7 @@
   }
 
   .fst-text-anger {
-    margin-left: 0;
+    margin-left: 8vw;
   }
 
   .snd-text-anger {
@@ -532,7 +545,7 @@
   }
 
   .trd-text-anger {
-    margin-left: 3vw;
+    margin-left: 18vw;
   }
 
   .big-red-icon-anger {
@@ -755,6 +768,23 @@
     height: 17vw;
     margin-left: -60vw;
   }
+
+  @keyframes moveGhost {
+    0% {
+      transform: translateX(-55vw);
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(10deg);
+      transform: translateX(45vw);
+    }
+    100% {
+      left: 105vw;
+      transform: rotate(-5deg);
+      transform: translateX(120vw);
+    }
+  }
+
   .home-button-fear {
     width: 48vw;
     height: 48.8vw;
